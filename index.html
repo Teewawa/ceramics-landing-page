@@ -10,21 +10,36 @@
 </head>
 <style>
     body {
-        background-color: rgb(231, 215, 194)
+        background-color: rgb(231, 215, 194);
+        color: rgb(166, 130, 99);
     }
 
-    h1,
-    h2 {
+    h1 {
+        color: rgb(166, 130, 99);
         text-align: center;
         padding: 0;
         margin: 0;
     }
 
+    p {
+        font-size: 17px;
+        line-height: 1.5;
+    }
+
+    .container {
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 2px;
+        margin: auto;
+        margin-top: 10px;
+    }
+
     .ceramic-intro-img {
         display: block;
         margin: auto;
-        width: 250px;
-        border-radius: 5px;
+        width: 300px;
+        border-radius: 4px;
         transition: all 250ms ease-in-out;
     }
 
@@ -33,50 +48,96 @@
         transform: scale(1.2);
     }
 
-    .gallery img {
-        width: 130px;
-        height: 140px;
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
     }
 
-    .gallery {
+    .gallery img {
+        width: 100%;
+        height: 150px;
+        border-radius: 4px;
+        transition: all 300ms ease-in-out;
+    }
 
-        text-align: center;
+    .gallery img:hover {
+        transform: scale(2);
     }
 
     .bttn-theme {
         text-align: right;
     }
 
+    .bttn-theme button {
+        background-color: rgb(166, 130, 99);
+        border: 1px solid rgb(166, 130, 99);
+        color: rgb(255, 235, 212);
+        padding: 10px 15px;
+        border-radius: 2px;
+        transition: all 200ms ease-in-out;
+    }
+
+    .bttn-theme button:hover {
+        background-color: rgb(39, 39, 39);
+        color: rgb(166, 130, 99);
+        border-color: rgb(39, 39, 39);
+    }
+
+    a {
+        color: #8B7666;
+    }
 
     .bttn-learn {
         display: block;
         margin: 0 auto;
-        border: 1px solid rgb(231, 215, 194);
-        background-color: white;
-        font-size: 16px;
+        margin-bottom: 10px;
+        background-color: rgb(166, 130, 99);
+        border: 1px solid rgb(166, 130, 99);
+        color: rgb(255, 235, 212);
+        font-size: 15px;
         padding: 10px 15px;
-        border-radius: 3px;
+        border-radius: 2px;
+        transition: all 300ms ease-in-out;
     }
 
-    .container {
-        max-width: 600px;
-        background-color: white;
-        padding: 20px;
-        border-radius: 3px;
-        margin: auto;
+    .bttn-learn:hover {
+        border: 1px solid rgb(255, 235, 212);
+        background-color: rgb(255, 235, 212);
+        color: rgb(166, 130, 99);
     }
 
     footer {
         text-align: center;
         font-size: 14px;
     }
+
+    .dark {
+        background-color: rgb(14, 13, 13);
+        color: rgb(166, 130, 99);
+    }
+
+    .dark .container {
+        background: rgba(39, 39, 39, 0.353)
+    }
+
+    .dark a {
+        color: rgb(255, 235, 212);
+    }
+
+    .dark .bttn-learn {}
+
+    .dark .bttn-theme button:hover {
+        background-color: rgb(255, 235, 212);
+        color: rgb(166, 130, 99);
+        border-color: white;
+    }
 </style>
 
 <body>
-    <div class="bttn-theme"><button>Dark theme</button></div>
+    <div class="bttn-theme"><button>Change theme</button></div>
     <div class="container">
         <h1>Ceramics</h1>
-        <h2>My favorite hobby</h2>
         <a href="https://en.wikipedia.org/wiki/Ceramic" target="_blank">
             <img class="ceramic-intro-img"
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/064/original/pexels-antoni-shkraba-4706134.jpg?1665445244"
@@ -99,7 +160,7 @@
         <p>A ceramic is any of the various hard, brittle, heat-resistant and corrosion-resistant
             materials made by shaping and then firing an inorganic, nonmetallic material, such as
             clay, at a high temperature. 'Ceramic' comes from the Greek word meaning 'pottery'.
-            Pottery is one of the oldest human technologies.Examples include earthenware,
+            Pottery is one of the oldest human technologies. Examples include earthenware,
             porcelain, and brick. <br>
             <br>
             Fragments of clay pottery found recently in Hunan
@@ -107,7 +168,7 @@
             Modern day ceramics now include domestic, industrial and building products, as well as a
             wide range of materials developed for use in advanced ceramic engineering, such as in semiconductors.
         </p>
-        <a href="https://en.wikipedia.org/wiki/Ceramic">Read more on Wikipedia</a>
+        <a href="https://en.wikipedia.org/wiki/Ceramic" target="_blank">Read more on Wikipedia</a>
         <br>
         <br>
         <button class="bttn-learn">Learn about ceramics</button>
@@ -115,6 +176,21 @@
     <footer>
         Coded by Tiara Mendiola and is Open-source on GitHub.
     </footer>
+
+    <script>
+        function changeTheme() {
+            let body = document.querySelector("body");
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+
+        }
+
+        let themeBttn = document.querySelector(".bttn-theme");
+        themeBttn.addEventListener("click", changeTheme);
+    </script>
 </body>
 
 </html>
