@@ -26,6 +26,11 @@
         line-height: 1.5;
     }
 
+    a {
+        color: #8B7666;
+        padding-bottom: 40px;
+    }
+
     .container {
         max-width: 600px;
         background-color: white;
@@ -33,6 +38,7 @@
         border-radius: 2px;
         margin: auto;
         margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .ceramic-intro-img {
@@ -84,34 +90,13 @@
         border-color: rgb(39, 39, 39);
     }
 
-    a {
-        color: #8B7666;
-    }
-
-    .bttn-learn {
-        display: block;
-        margin: 0 auto;
-        margin-bottom: 10px;
-        background-color: rgb(166, 130, 99);
-        border: 1px solid rgb(166, 130, 99);
-        color: rgb(255, 235, 212);
-        font-size: 15px;
-        padding: 10px 15px;
-        border-radius: 2px;
-        transition: all 300ms ease-in-out;
-    }
-
-    .bttn-learn:hover {
-        border: 1px solid rgb(255, 235, 212);
-        background-color: rgb(255, 235, 212);
-        color: rgb(166, 130, 99);
-    }
 
     footer {
         text-align: center;
         font-size: 14px;
     }
 
+    /*Dark theme CSS*/
     .dark {
         background-color: rgb(14, 13, 13);
         color: rgb(166, 130, 99);
@@ -124,8 +109,6 @@
     .dark a {
         color: rgb(255, 235, 212);
     }
-
-    .dark .bttn-learn {}
 
     .dark .bttn-theme button:hover {
         background-color: rgb(255, 235, 212);
@@ -169,9 +152,7 @@
             wide range of materials developed for use in advanced ceramic engineering, such as in semiconductors.
         </p>
         <a href="https://en.wikipedia.org/wiki/Ceramic" target="_blank">Read more on Wikipedia</a>
-        <br>
-        <br>
-        <button class="bttn-learn">Learn about ceramics</button>
+
     </div>
     <footer>
         Coded by Tiara Mendiola and is Open-source on GitHub.
@@ -185,7 +166,8 @@
             } else {
                 body.classList.add("dark");
             }
-
+            //Similar way to achieve this is to use:
+            //body.classList.toggle("dark");
         }
 
         let themeBttn = document.querySelector(".bttn-theme");
