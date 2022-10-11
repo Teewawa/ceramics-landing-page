@@ -6,35 +6,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ceramics </title>
-    <button>Dark theme</button>
+
 </head>
 <style>
-    .ceramic-img {
+    body {
+        background-color: rgb(231, 215, 194)
+    }
+
+    h1,
+    h2 {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    a img {
+        display: block;
+        margin: auto;
         width: 250px;
+        border-radius: 6px;
+    }
+
+    .gallery img {
+        width: 130px;
+        height: 140px;
+    }
+
+    .gallery {
+
+        text-align: center;
+    }
+
+    .bttn-theme {
+        text-align: right;
+    }
+
+
+    .bttn-learn {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid rgb(231, 215, 194);
+        background-color: white;
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 3px;
+    }
+
+    .container {
+        max-width: 600px;
+        background-color: white;
+        padding: 20px;
+        border-radius: 3px;
+        margin: auto;
+    }
+
+    footer {
+        text-align: center;
+        font-size: 14px;
     }
 </style>
 
 <body>
-    <h1>Ceramics</h1>
-    <h2>My favorite hobby</h2>
-    <a href="https://en.wikipedia.org/wiki/Ceramic">
-        <img class="ceramic-img"
-            src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/064/original/pexels-antoni-shkraba-4706134.jpg?1665445244"
-            alt="pottery wheel with thrown pot">
-    </a>
-
-    <p>A ceramic is any of the various hard, brittle, heat-resistant and corrosion-resistant
-        materials made by shaping and then firing an inorganic, nonmetallic material, such as
-        clay, at a high temperature. 'Ceramic' comes from the Greek word meaning 'pottery'.
-        Pottery is one of the oldest human technologies.Examples include earthenware,
-        porcelain, and brick. <br>
+    <div class="bttn-theme"><button>Dark theme</button></div>
+    <div class="container">
+        <h1>Ceramics</h1>
+        <h2>My favorite hobby</h2>
+        <a href="https://en.wikipedia.org/wiki/Ceramic">
+            <img class="ceramic-img"
+                src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/064/original/pexels-antoni-shkraba-4706134.jpg?1665445244"
+                alt="pottery wheel with thrown pot">
+        </a>
         <br>
-        Fragments of clay pottery found recently in Hunan
-        Province in China have been carbon dated to 15,400 - 18,300 years old.
-        Modern day ceramics now include domestic, industrial and building products, as well as a
-        wide range of materials developed for use in advanced ceramic engineering, such as in semiconductors.
-    </p>
-    <button>Learn about ceramics</button>
+        <div class="gallery">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/066/original/pexels-quang-nguyen-vinh-2134816.jpg?1665445263"
+                alt="A woman making a ceramic pot">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/062/original/sfo-greek-pottery.jpg?1665445225"
+                alt="Example of greek designed pottery">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/061/original/contemporary-ceramic-artists-20.jpg?1665445219"
+                alt="Example of contemporary ceramics of two faces">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/063/original/jugs-g083ece05b_1920.jpg?1665445232"
+                alt="A stack of white pottery pots">
+        </div>
+
+
+
+        <p>A ceramic is any of the various hard, brittle, heat-resistant and corrosion-resistant
+            materials made by shaping and then firing an inorganic, nonmetallic material, such as
+            clay, at a high temperature. 'Ceramic' comes from the Greek word meaning 'pottery'.
+            Pottery is one of the oldest human technologies.Examples include earthenware,
+            porcelain, and brick. <br>
+            <br>
+            Fragments of clay pottery found recently in Hunan
+            Province in China have been carbon dated to 15,400 - 18,300 years old.
+            Modern day ceramics now include domestic, industrial and building products, as well as a
+            wide range of materials developed for use in advanced ceramic engineering, such as in semiconductors.
+        </p>
+        <a href="https://en.wikipedia.org/wiki/Ceramic">Read more on Wikipedia</a>
+        <br>
+        <br>
+        <button class="bttn-learn">Learn about ceramics</button>
+    </div>
     <footer>
         Coded by Tiara Mendiola and is Open-source on GitHub.
     </footer>
