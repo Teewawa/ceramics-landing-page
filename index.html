@@ -20,11 +20,17 @@
         margin: 0;
     }
 
-    a img {
+    .ceramic-intro-img {
         display: block;
         margin: auto;
         width: 250px;
-        border-radius: 6px;
+        border-radius: 5px;
+        transition: all 250ms ease-in-out;
+    }
+
+    .ceramic-intro-img:hover {
+        filter: contrast(65%);
+        transform: scale(1.2);
     }
 
     .gallery img {
@@ -71,8 +77,8 @@
     <div class="container">
         <h1>Ceramics</h1>
         <h2>My favorite hobby</h2>
-        <a href="https://en.wikipedia.org/wiki/Ceramic">
-            <img class="ceramic-img"
+        <a href="https://en.wikipedia.org/wiki/Ceramic" target="_blank">
+            <img class="ceramic-intro-img"
                 src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/048/064/original/pexels-antoni-shkraba-4706134.jpg?1665445244"
                 alt="pottery wheel with thrown pot">
         </a>
